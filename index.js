@@ -57,8 +57,6 @@ client.on('guildMemberAdd', async member => {
   // ✍️ كتابة "NEXO2" فقط بدون اسم العضو
   ctx.fillStyle = '#00bfff';
   ctx.textAlign = 'center';
-  ctx.font = 'bold 42px Arial';
-  ctx.fillText('NEXO2', canvas.width / 2, 420);
 
   // 💾 حفظ الصورة
   const buffer = canvas.toBuffer('image/png');
