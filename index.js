@@ -54,10 +54,17 @@ client.on('guildMemberAdd', async member => {
   );
   ctx.restore();
 
-  // ✍️ كتابة اسم العضو تحت "NEXO2"
+  // ✍️ كتابة "NEXO2" واسم العضو تحته
+  ctx.fillStyle = '#00bfff';
+  ctx.textAlign = 'center';
+
+  // كلمة NEXO2
   ctx.font = 'bold 42px Arial';
-  ctx.fillStyle = '#00bfff'; // لون مشابه لـ "NEXO2"
-  ctx.fillText(member.user.username, 460, 455);
+  ctx.fillText('NEXO2', canvas.width / 2, 420);
+
+  // اسم العضو تحته مباشرة
+  ctx.font = 'bold 28px Arial';
+  ctx.fillText(member.user.username, canvas.width / 2, 460);
 
   // 💾 حفظ الصورة
   const buffer = canvas.toBuffer('image/png');
@@ -75,4 +82,5 @@ client.on('guildMemberAdd', async member => {
 });
 
 client.login(process.env.TOKEN);
+
                     
