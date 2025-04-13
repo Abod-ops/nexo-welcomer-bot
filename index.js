@@ -61,3 +61,15 @@ client.on('guildMemberAdd', async member => {
 
 client.login(process.env.TOKEN);
 require('http').createServer((req, res) => res.end("Bot is running")).listen(3000);
+
+// 👇 هذا هو اللي يشتغل مع UptimeRobot
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Bot is alive!');
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('✅ Web server is running');
+});
