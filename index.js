@@ -22,6 +22,7 @@ client.on('guildMemberAdd', async member => {
   if (!channel) return;
 
   const canvas = createCanvas(800, 800);
+
   const ctx = canvas.getContext('2d');
 
   // 🖼️ الخلفية
@@ -59,3 +60,4 @@ client.on('guildMemberAdd', async member => {
 });
 
 client.login(process.env.TOKEN);
+require('http').createServer((req, res) => res.end("Bot is running")).listen(3000);
