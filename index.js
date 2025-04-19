@@ -30,7 +30,7 @@ client.on('guildMemberAdd', async member => {
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
   // 🟢 رسم صورة البروفايل داخل دائرة
-  const centerX = 260;
+  const centerX = 250;
   const centerY = 390;
   const radius = 115;
   const avatar = await loadImage(member.user.displayAvatarURL({ extension: 'png' }));
